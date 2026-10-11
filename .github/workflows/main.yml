@@ -120,7 +120,7 @@ jobs:
           const DB = (process.env.FIREBASE_DB_URL || "").trim().replace(/\/+$/, "");
           if (!DB) { console.log("::error::GitHub secret ZEDGE4_DB_URL is missing - set it in GitHub > Settings > Secrets and variables > Actions"); process.exit(1); }
           const ACCOUNT = "ZEDGE4";
-          const DEFAULT_WINDOWS = [7, 13, 19];   // window start hours (Asia/Dhaka) - fallback only
+          const DEFAULT_WINDOWS = [4, 9, 14];   // window start hours (Asia/Dhaka) - fallback only
           const WINDOW_HOURS = 3;                      // each window lasts 3 hours
           const SLOT_MIN = 30;                         // scheduler pings every 30 min
           const RUN_ID = process.env.GITHUB_RUN_ID || "";
